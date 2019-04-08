@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.apps.rahimasif.taboo.NumberPickerPreference
+    <net.rahimasif.apps.Taboo.NumberPickerPreference
         android:key="userID"
         android:title="User ID"
         android:summary="Unique ID to avoid word repetition"
@@ -15,13 +15,13 @@
         android:entryValues="@array/listTableValues"
         android:defaultValue="1" />
 
-    <com.apps.rahimasif.taboo.NumberPickerPreference
+    <net.rahimasif.apps.Taboo.NumberPickerPreference
         android:key="wordsPerPlayer"
         android:title="Max Words Per Player"
         android:summary="Maximum number of words that each player can play"
         android:defaultValue="5" />
 
-    <com.apps.rahimasif.taboo.TimePickerPreference
+    <net.rahimasif.apps.Taboo.TimePickerPreference
         android:key="timePerPlayer"
         android:title="Time Per Player"
         android:summary="Maximum number of words that each player can play"
