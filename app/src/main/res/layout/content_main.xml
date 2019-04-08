@@ -5,16 +5,235 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context="com.apps.rahimasif.taboo.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="PLAY"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp" />
+
     <TextView
+        android:id="@+id/tvScoreLabel"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical|center"
+        android:text="Score"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlay"
+        app:layout_constraintRight_toLeftOf="@+id/tvScoreValue"
+        app:layout_constraintTop_toTopOf="@+id/btnPlay"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvScoreValue"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="23"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textColor="@color/dark_green"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScoreLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvScoreLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:text="1:23.45"
+        android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayoutTabooCard" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutTabooCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlay">
+
+        <TextView
+            android:id="@+id/tvTabooWordPhrase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/word_background"
+            android:text="Word or Phrase"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/dark_green"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvForbiddenWord1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/forbidden_word_background"
+            android:text="Forbidden Word #1"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTabooWordPhrase" />
+
+        <TextView
+            android:id="@+id/tvForbiddenWord2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/forbidden_word_background"
+            android:text="Forbidden Word #2"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForbiddenWord1" />
+
+        <TextView
+            android:id="@+id/tvForbiddenWord3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/forbidden_word_background"
+            android:text="Forbidden Word #3"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForbiddenWord2" />
+
+        <TextView
+            android:id="@+id/tvForbiddenWord4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/forbidden_word_background"
+            android:text="Forbidden Word #4"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForbiddenWord3" />
+
+        <TextView
+            android:id="@+id/tvForbiddenWord5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/forbidden_word_background"
+            android:text="Forbidden Word #5"
+            android:textAlignment="center"
+            android:textColor="@color/dark_red"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvForbiddenWord4" />
+
+        <Button
+            android:id="@+id/btnSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@android:color/holo_orange_dark"
+            android:text="Skip"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btnCaught"
+            app:layout_constraintRight_toLeftOf="@+id/btnGotIt"
+            app:layout_constraintTop_toBottomOf="@+id/tvForbiddenWord5" />
+
+        <Button
+            android:id="@+id/btnGotIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:text="Got It!"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSkip"
+            app:layout_constraintLeft_toRightOf="@+id/btnSkip"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnSkip" />
+
+        <Button
+            android:id="@+id/btnCaught"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_light"
+            android:text="Caught"
+            app:layout_constraintBottom_toBottomOf="@+id/btnSkip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnSkip"
+            app:layout_constraintTop_toTopOf="@+id/btnSkip"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

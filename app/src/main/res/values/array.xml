@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listTables">
+        <item>Test Table</item>
+        <item>Main Table</item>
+        <item>Team #1 Table</item>
+        <item>Team #2 Table</item>
+        <item>Team #3 Table</item>
+        <item>Team #4 Table</item>
+    </string-array>
+
+    <string-array name="listTableValues">
+        <item>testTable</item>
+        <item>mainTable</item>
+        <item>team1Table</item>
+        <item>team2Table</item>
+        <item>team3Table</item>
+        <item>team4Table</item>
+    </string-array>
+</resources>

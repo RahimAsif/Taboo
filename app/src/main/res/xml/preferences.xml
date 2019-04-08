@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.apps.rahimasif.taboo.NumberPickerPreference
+        android:key="userID"
+        android:title="User ID"
+        android:summary="Unique ID to avoid word repetition"
+        android:defaultValue="1" />
+
+    <ListPreference
+        android:key="tableName"
+        android:title="Table Name"
+        android:summary="Name of table to use"
+        android:entries="@array/listTables"
+        android:entryValues="@array/listTableValues"
+        android:defaultValue="1" />
+
+    <com.apps.rahimasif.taboo.NumberPickerPreference
+        android:key="wordsPerPlayer"
+        android:title="Max Words Per Player"
+        android:summary="Maximum number of words that each player can play"
+        android:defaultValue="5" />
+
+    <com.apps.rahimasif.taboo.TimePickerPreference
+        android:key="timePerPlayer"
+        android:title="Time Per Player"
+        android:summary="Maximum number of words that each player can play"
+        android:defaultValue="1:30" />
+
+    <CheckBoxPreference
+        android:key="allowDirtyWords"
+        android:title="Allow Dirty Words"
+        android:defaultValue="true"
+        android:summary="If selected, dirty and vulgar words will be fetched" />
+
+
+</PreferenceScreen>
